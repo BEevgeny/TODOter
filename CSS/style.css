@@ -1,0 +1,40 @@
+body {
+//    list-style-type: flex;
+//    display: flex;
+}
+#title {
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    color: #3c763d;
+    background-color: #dff0d8;
+}
+
+#list{
+
+  }
+
+
+#delete{
+    text-decoration: line-through;
+    font-style: italic;
+  }
+
+ul{
+    width: auto;
+//    width: 300px;
+    list-style-type: decimal;   /* убираем точку слева */
+    display: table-cell;
+  }
+
+li{
+//  border: solid 1px black;
+    font-size: 20px;
+    padding: 2px;
+  }
+
+button {
+    margin: 10px;
+}

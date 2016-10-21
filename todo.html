@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>TODO-ter</title>
+	<meta charset="utf-8"></meta>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="init()">
+<button onclick='foo()'>Добавить</button>
+<button onclick='bar()'>Завершить</button>
+<!-- <input type="checkbox" id="c1" name="cc" /> -->
+
+<script>
+	function init(){
+		var h1 = document.createElement('h1');
+		h1.innerHTML = 'TODO-ter';
+		var h2 = document.createElement('h2');
+		h2.innerHTML = 'Планы на сегодня';
+		var input = document.createElement('input');
+		var ul = document.createElement('ul');
+		var ul2 = document.createElement('ul');
+		var div = document.createElement('div');
+
+		div.appendChild(input);
+		div.appendChild(h2);
+		div.appendChild(h1);
+		div.appendChild(ul);
+		div.appendChild(ul2);
+
+			div.className = 'list';
+
+
+		input.setAttribute('type','checkbox');
+
+		h1.setAttribute('id', 'title');
+		ul.setAttribute('id', 'list');
+		ul2.setAttribute('id', 'delete');
+
+		document.body.insertBefore(ul2, document.querySelector('button'));
+		document.body.insertBefore(h1, document.querySelector('ul'))
+		document.body.insertBefore(ul, ul2)
+	} 	
+
+	function foo(){
+		var txt = prompt('txt', '');
+		txt = document.createTextNode(txt);
+		var li = document.createElement('li');
+
+		li.appendChild(txt);
+//		li.appendChild(text);
+
+		document.getElementById('list').appendChild(li)
+		document.getElementById('list').appendChild(input)
+//		document.body.insertBefore(input, document.querySelector('li'))
+	}
+
+	function bar(){
+		var ul = document.getElementById('list');
+		var ul2 = document.getElementById('delete');
+		var li = ul.children[0];
+		var deletedLi = ul.removeChild(li);
+
+		ul2.appendChild(deletedLi)
+
+//		ul.removeChild(li)
+
+	// setTimeout(function(){
+	// 		var deletedLi = ul.removeChild(li);
+
+	// 		ul2.appendChild(deletedLi);
+	// }, 1000)
+
+}
+
+
+
+</script>
+</body></html>
