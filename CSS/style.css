@@ -3,13 +3,19 @@ body {
 //    display: flex;
 }
 #title {
-    padding: 15px;
-    width: 250px;
+    padding: 5px;
+    width: 600px;
     text-align: center;
     border: 1px solid #d6e9c6;
     border-radius: 4px;
     color: #3c763d;
     background-color: #dff0d8;
+}
+h2 {
+    text-align: center;
+    border: 1px solid #3316E8;
+    width: 300px;
+    border-radius: 10px;
 }
 
 #list{
@@ -23,8 +29,8 @@ body {
   }
 
 ul{
-    width: auto;
-//    width: 300px;
+//    width: auto;
+    width: 300px;
     list-style-type: decimal;   /* убираем точку слева */
     display: table-cell;
   }

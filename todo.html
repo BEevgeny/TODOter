@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>TODO-ter</title>
+	<title>TODO-ter v 1.1</title>
 	<meta charset="utf-8"></meta>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -19,10 +19,11 @@
 		var ul2 = document.createElement('ul');
 		var div = document.createElement('div');
 
-		div.appendChild(input);
+/*		div.appendChild(input);
 		div.appendChild(h1);
 		div.appendChild(ul);
-		div.appendChild(ul2);
+		div.appendChild(ul2);*/
+
 
 			div.className = 'list';
 
@@ -31,15 +32,24 @@
 		h1.setAttribute('id', 'title');
 		ul.setAttribute('id', 'list');
 		ul2.setAttribute('id', 'delete');
+		ul2.setAttribute('className', 'del');
 
-		var h2 = document.createElement('h2');
-		h2.innerHTML = 'Планы на сегодня';
-		h2.setAttribute('className', 'h2');
-		document.body.insertBefore(h2, null)
+		var todey = document.createElement('h2');
+		todey.innerHTML = 'Задачи:';
+//		todey.setAttribute('className', 'h2');
+//		document.body.insertBefore(todey, null)
+
+		var ysday = document.createElement('h2');
+		ysday.innerHTML = 'Завершено:';
+//		ysday.setAttribute('className', 'h2');
+//		document.body.insertBefore(todey, null)
 
 		document.body.insertBefore(ul2, document.querySelector('button'));
-		document.body.insertBefore(h1, document.querySelector('ul'))
+		document.body.insertBefore(h1, document.querySelector('ul'));
+		document.body.insertBefore(todey, document.querySelector('ul'));
 		document.body.insertBefore(ul, ul2)
+		document.body.insertBefore(ysday, document.getElementById('delete'));
+
 	} 	
 
 	function foo(){
